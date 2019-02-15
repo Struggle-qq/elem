@@ -6,13 +6,13 @@ import goods from 'components/goods/goods.vue';
 import ratings from 'components/ratings/ratings';
 import seller from 'components/seller/seller';
 
-// import 'common/stylus/index.styl';
+import 'common/stylus/index.styl';
 
 
 Vue.use(VueRouter);  //使用router路由
 
 
-Vue.use(VueResource);
+Vue.use(VueResource);  //全局注册vueR
 
 let app = Vue.extend(App); //使用router路由
 
@@ -20,7 +20,7 @@ let router = new VueRouter({
 	linkActiveClass: 'active'
 });
 
-router.map({     //路径
+router.map({     //路径  配置路由词典
 	'/goods': {
 		component: goods
 	},
